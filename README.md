@@ -1,5 +1,7 @@
 # FreezeProof — demo local
 
+**Repositori privat:** [Ferran696/89_INNOLAB](https://github.com/Ferran696/89_INNOLAB)
+
 Prototip de hackató per observar visualment el flux de producte en una línia de congelació i preparar una conversa de servei. La Basler Dart ja muntada a la Raspberry Pi s'utilitza per capturar clips autoritzats; la detecció i el seguiment s'executen després al PC. No cal inferència en directe, servidor ni Hailo.
 
 **Límits:** el recompte és una estimació visual de peces que travessen una línia, no un comptador homologat ni una base de facturació. RGB no mesura pes, geometria real, temperatura interior, innocuïtat ni congelació correcta. La càrrega és un índex de deteccions configurat, no superfície ni capacitat tèrmica.
