@@ -1,0 +1,3 @@
+recipe_id,description,nominal_mass_g,format_thickness_declared,entry_temperature_range_c,exit_target_declared,illustrative_rate_eur_per_unit,rate_status
+burger_200g,"Hamburguesa; massa nominal declarada de 200 g",200,,,,,pending_not_approved
+burger_500g,"Hamburguesa; massa nominal declarada de 500 g",500,,,,,pending_not_approved

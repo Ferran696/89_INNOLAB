@@ -1,0 +1,39 @@
+# Coordinates are normalized to [0, 1] relative to frame width and height.
+recipe_id: burger_200g
+clip_origin: simulated # Change to real only for approved, actual plant footage.
+model: null # Set to a local model path with --model; do not commit model weights.
+
+detector:
+  confidence: 0.25
+  iou: 0.45
+  image_size: 640
+  class_ids: [] # Empty means all model classes; set explicitly for a custom model.
+
+tracking:
+  tracker: bytetrack.yaml
+
+zone_polygon:
+  - [0.05, 0.20]
+  - [0.95, 0.20]
+  - [0.95, 0.90]
+  - [0.05, 0.90]
+
+count_line:
+  points:
+    - [0.10, 0.55]
+    - [0.90, 0.55]
+  direction: positive # positive is from the negative to positive signed side.
+  hysteresis_px: 4
+
+occupancy:
+  interval_seconds: 1.0
+  # Zero detections means visually empty by this model, not proof the belt has no product.
+  reference_item_count: 6 # Visual proxy only; not area, mass, capacity, or thermal load.
+
+quality:
+  # Optional conservative image checks. Tune on approved sample footage; null disables a check.
+  min_laplacian_variance: null
+  min_mean_luma: null
+  max_mean_luma: null
+  # Manually mark known obstructed/unusable periods as [start_seconds, end_seconds].
+  unavailable_intervals: []
